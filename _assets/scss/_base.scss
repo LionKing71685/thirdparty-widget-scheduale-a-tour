@@ -1,0 +1,42 @@
+/* Imported Fonts */
+/* Google Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i');
+
+/* Fonts Fonts */
+$main-font: 'Montserrat', sans-serif;
+
+/* Colors */
+$prime: #c91f25;
+$secondary: #80ddd0;
+$green: #1fc844;
+$white: #fff;
+$black: #000;
+
+/* General */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {
+  font-family: $main-font;
+  font-size: 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: $main-font;
+  line-height: 1.35em;
+}
+p {
+  line-height: 1.65em;
+  color: lighten($black, 40%);
+}
+ul {
+  list-style: none;
+}
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
+a {
+  transition: all 300ms ease-out;
+  &:hover {
+  }
+}

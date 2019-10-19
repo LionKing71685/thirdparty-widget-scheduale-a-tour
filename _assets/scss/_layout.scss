@@ -1,0 +1,45 @@
+header, main, footer {
+  @extend %position-relative;
+}
+
+header {
+  @extend %container;
+}
+
+main {
+  section {
+    @extend %position-relative;
+    form {
+      #bedrooms {
+        .select {
+          .option {
+            @extend %container;
+            grid-template-columns: auto auto;
+          }
+        }
+      }
+      #date, #time {
+        .select {
+          @extend %container;
+          grid-template-columns: auto auto;
+        }
+      }
+      #info {
+        .select {
+          .input {
+            @extend %container;
+            grid-template-columns: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  @extend %container;
+  grid-template-columns: auto auto;
+}

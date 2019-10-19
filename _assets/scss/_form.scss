@@ -1,0 +1,43 @@
+/* Base Form Styling */
+form {
+  fieldset {
+    border: none;
+    label, input, span, button {
+      display: block;
+    }
+    label {
+      margin-bottom: 10px;
+    }
+    textarea:focus, input:focus{
+      outline: none;
+    }
+    input {
+      width: 100%;
+      height: 45px;
+      padding: 0.5rem;
+      font-size: 1rem;
+      line-height: 1em;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    input:focus {
+      border-width: 1px;
+      border-color: $prime;
+    }
+    .form-error {
+      display: none;
+      margin-top: 10px;
+      color: red;
+      font-size: 12px;
+    }
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: lighten($black, 75%);
+      opacity: 1; /* Firefox */
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: lighten($black, 75%);
+    }
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: lighten($black, 75%);
+    }
+  }
+}

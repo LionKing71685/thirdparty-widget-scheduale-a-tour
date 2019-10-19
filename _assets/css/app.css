@@ -1,0 +1,361 @@
+/* Imported Fonts */
+/* Google Font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i");
+/* Fonts Fonts */
+/* Colors */
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.35em;
+}
+
+p {
+  line-height: 1.65em;
+  color: #666666;
+}
+
+ul {
+  list-style: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+a {
+  transition: all 300ms ease-out;
+}
+
+/* Helpers */
+header, main, footer, main section {
+  position: relative;
+  overflow: hidden;
+}
+
+header, main section form #bedrooms .select .option, main section form #date .select, main section form #time .select, main section form #info .select .input, footer {
+  display: grid;
+  grid-gap: 0;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 0.75s;
+  animation-name: fade;
+  animation-duration: 0.75s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* transitions ex. @include transition(color .3s ease);*/
+/* Border Radius ex. @include border-radius(5px); */
+/* Opacity ex. @include opacity(0.5); */
+/* Base Form Styling */
+form fieldset {
+  border: none;
+}
+form fieldset label, form fieldset input, form fieldset span, form fieldset button {
+  display: block;
+}
+form fieldset label {
+  margin-bottom: 10px;
+}
+form fieldset textarea:focus, form fieldset input:focus {
+  outline: none;
+}
+form fieldset input {
+  width: 100%;
+  height: 45px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  line-height: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+form fieldset input:focus {
+  border-width: 1px;
+  border-color: #c91f25;
+}
+form fieldset .form-error {
+  display: none;
+  margin-top: 10px;
+  color: red;
+  font-size: 12px;
+}
+form fieldset ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bfbfbf;
+  opacity: 1;
+  /* Firefox */
+}
+form fieldset :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bfbfbf;
+}
+form fieldset ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bfbfbf;
+}
+
+main section form #bedrooms .select .option {
+  grid-template-columns: auto auto;
+}
+main section form #date .select, main section form #time .select {
+  grid-template-columns: auto auto;
+}
+main section form #info .select .input {
+  grid-template-columns: auto;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  grid-template-columns: auto auto;
+}
+
+.container header {
+  text-align: center;
+}
+.container header .mainHeader {
+  padding: 5px;
+}
+.container header .subHeader {
+  padding: 5px;
+}
+.container main section form {
+  padding: 0 10px;
+}
+.container main section form fieldset .select .option {
+  position: relative;
+  margin: 5px;
+  padding: 10px;
+  text-align: center;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  background-color: #f7f7f7;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.container main section form fieldset .select .option .detail {
+  font-size: 0.75rem;
+}
+.container main section form fieldset .select .option:hover, .container main section form fieldset .select .option:focus, .container main section form fieldset .select .option.selected {
+  cursor: pointer;
+  background-color: #e6e6e6;
+}
+.container main section form fieldset .select .option .check {
+  position: absolute;
+  display: none;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-image: url(../images/check-mark.svg);
+  background-size: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #1fc844;
+}
+.container main section form fieldset .select .option .check.check-visible {
+  display: block;
+}
+.container main section form fieldset .text {
+  margin: 15px 5px;
+  font-size: 0.5rem;
+}
+.container main section form fieldset .text a {
+  color: #666666;
+}
+.container main section form #bedrooms {
+  display: none;
+}
+.container main section form #bedrooms .select .option {
+  display: flex;
+  margin-bottom: 10px;
+}
+.container main section form #bedrooms .select .option .name {
+  margin: auto auto auto 15px;
+  text-align: left;
+}
+.container main section form #bedrooms .select .option .detail {
+  margin: auto 15px auto auto;
+  text-align: right;
+}
+.container main section form #bedrooms .select #unsure {
+  height: 50px;
+}
+.container main section form #bedrooms .select #unsure .name {
+  margin: auto;
+  text-align: center;
+}
+.container main section form #date, .container main section form #time {
+  display: none;
+}
+.container main section form #date .select .option .name, .container main section form #time .select .option .name {
+  margin-bottom: 5px;
+}
+.container main section form #info {
+  display: none;
+}
+.container main section form #info .select .input {
+  margin: 5px 5px 25px;
+}
+.container main section form #info .select .input label {
+  font-size: 1rem;
+  color: gray;
+}
+.container main section form #info .select .input button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  background-color: #000;
+}
+.container main section #complete {
+  display: none;
+}
+.container main section #complete .information {
+  padding: 0 10px 0;
+}
+.container main section #complete .information p {
+  font-size: 14px;
+}
+.container main section #complete .information ul {
+  padding: 3rem 0;
+}
+.container main section #complete .information ul li {
+  margin-bottom: 2rem;
+}
+.container main section #complete .information ul li a {
+  display: block;
+  text-decoration: none;
+  line-height: 1em;
+  color: #c91f25;
+}
+.container main section #complete .information ul li a img {
+  opacity: 0.25;
+  display: inline-block;
+  width: 16px;
+  margin-top: -2px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.container footer {
+  border-top: 1px solid #e6e6e6;
+}
+.container footer button {
+  width: 35px;
+  height: 35px;
+  box-shadow: none;
+  outline: none;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+}
+.container footer button img {
+  width: 13px;
+  vertical-align: middle;
+}
+.container footer div {
+  padding: 10px;
+  display: block;
+}
+.container footer .not-active {
+  background-color: #e6e6e6;
+}
+.container footer .active {
+  background-color: gray;
+}
+.container footer .back {
+  text-align: left;
+}
+.container footer .back img {
+  margin-left: -4px;
+}
+.container footer .next {
+  text-align: right;
+}
+.container footer .next img {
+  margin-right: -4px;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  overflow: auto;
+  /* Enable scroll if needed */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  left: 0;
+  top: 0;
+  padding-top: 100px;
+  /* Location of the box */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  z-index: 1;
+  /* Sit on top */
+}
+.modal .modal-content {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid white;
+  background-color: #fff;
+}
+@media screen and (min-width: 64em) {
+  .modal .modal-content {
+    width: 50%;
+  }
+}
+.modal .modal-content .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal .modal-content .close:hover, .modal .modal-content .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,347 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Tour v01</title>
+    <link rel="stylesheet" href="_assets/css/app.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="mainHeader">
+          <h2 id="trouble">Schedule a Tour</h2>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <form action="">
+            <fieldset id="bedrooms" class="question fade">
+              <header>
+                <div class="container">
+                  <div class="subHeader">
+                    <h4>How many bedroom are you looking for?</h4>
+                  </div>
+                </div>
+              </header>
+
+              <div class="select">
+                <div class="option" id="studio" onclick="nextQuestion(1)" data-bedroom="studio">
+                  <div class="name">
+                    <h4>Studio</h4>
+                  </div>
+                  <div class="detail">
+                    <span>0 - 1500 sq. ft.</span>
+                    <span>From $3,500</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="one-bedroom" onclick="nextQuestion(1)" data-bedroom="1-bed">
+                  <div class="name">
+                    <h4>1 Bedroom</h4>
+                  </div>
+                  <div class="detail">
+                    <span>0 - 1500 sq. ft.</span>
+                    <span>From $3,500</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+
+                <div class="option" id="two-bedrooms" onclick="nextQuestion(1)" data-bedroom="2-bed">
+                  <div class="name">
+                    <h4>2 Bedroom</h4>
+                  </div>
+                  <div class="detail">
+                    <span>0 - 1500 sq. ft.</span>
+                    <span>From $3,500</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="three-bedrooms" onclick="nextQuestion(1)" data-bedroom="3-bed">
+                  <div class="name">
+                    <h4>3 Bedroom</h4>
+                  </div>
+                  <div class="detail">
+                    <span>0 - 1500 sq. ft.</span>
+                    <span>From $3,500</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="unsure" data-bedroom="unsure">
+                  <div class="name">
+                    <h4>Unsure</h4>
+                  </div>
+                  <span class="check"></span>
+                </div>
+              </div>
+
+              <div class="text">
+                <p>Prices can vary depending on your preferred lease term, lease signing date and other conditions. During the tour, you can ask one of our leasing representatives about specific unit layouts, pricing and availabiity.</p>
+              </div>
+            </fieldset>
+
+            <fieldset id="date" class="question fade">
+              <header>
+                <div class="subHeader">
+                  <h4>Which day would you like to schedule your tour?</h4>
+                </div>
+              </header>
+
+              <div class="select">
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>Date</h4>
+                  </div>
+                  <div class="detail">
+                    <span class="date-span"></span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>Date</h4>
+                  </div>
+                  <div class="detail">
+                    <span class="date-span"></span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>Date</h4>
+                  </div>
+                  <div class="detail">
+                    <span class="date-span"></span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>Date</h4>
+                  </div>
+                  <div class="detail">
+                    <span class="date-span"></span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>Date</h4>
+                  </div>
+                  <div class="detail">
+                    <span class="date-span"></span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>Date</h4>
+                  </div>
+                  <div class="detail">
+                    <span class="date-span"></span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>Date</h4>
+                  </div>
+                  <div class="detail">
+                    <span class="date-span"></span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>Date</h4>
+                  </div>
+                  <div class="detail">
+                    <span class="date-span"></span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+              </div>
+
+              <div class="text">
+                <p>Need to schedule a tour much later in the future? If so, you can also <a id="calendar" href="JavaScript:void(0)">use a calendar</a> to select a date.</p>
+              </div>
+            </fieldset>
+
+            <fieldset id="time" class="question fade">
+              <header>
+                <div class="subHeader">
+                  <h4>What time on Mon 4/29/19 would you like to arrive?</h4>
+                </div>
+              </header>
+
+              <div class="select">
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>10:00</h4>
+                  </div>
+                  <div class="detail">
+                    <span>AM</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>11:00</h4>
+                  </div>
+                  <div class="detail">
+                    <span>AM</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>12:00</h4>
+                  </div>
+                  <div class="detail">
+                    <span>PM</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>1:00</h4>
+                  </div>
+                  <div class="detail">
+                    <span>PM</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>2:00</h4>
+                  </div>
+                  <div class="detail">
+                    <span>PM</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>3:00</h4>
+                  </div>
+                  <div class="detail">
+                    <span>PM</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>4:00</h4>
+                  </div>
+                  <div class="detail">
+                    <span>PM</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+                <div class="option" id="" onclick="nextQuestion(1)">
+                  <div class="name">
+                    <h4>5:00</h4>
+                  </div>
+                  <div class="detail">
+                    <span>PM</span>
+                  </div>
+                  <span class="check"></span>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset id="info" class="question fade">
+              <header>
+                <div class="subHeader">
+                  <h4>Please provide your contact details to confirm your tour on 4/29/19 at 3PM.</h4>
+                </div>
+              </header>
+
+              <div class="select">
+                <div class="input">
+                  <label for="first_name">First Name</label>
+                  <input type="text" name="first_name" placeholder="Ex. Jason" required>
+                  <span class="form-error">Sorry! Your first name is required</span>
+                </div>
+                <div class="input">
+                  <label for="last_name">Last Name</label>
+                  <input type="text" name="last_name" placeholder="Ex. Gordon" required>
+                  <span class="form-error">Sorry! Your last name is required</span>
+                </div>
+                <div class="input">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" placeholder="Ex. jason@email.com" required>
+                  <span class="form-error">Sorry! Your email is required</span>
+                </div>
+                <div class="input">
+                  <label for="phone">Phone</label>
+                  <input type="tel" name="phone" placeholder="Ex. (555) 555-5555 (optional)">
+                </div>
+                <div class="input" id="comment-block" style="display: none;">
+                  <label for="comments">Comments</label>
+                  <input type="textarea" rows="4" cols="50" name="comments" placeholder="Enter a message... (optional)">
+                </div>
+                <div class="text">
+                  <p id="comments">Would you like to <a href="#">add a message</a> along with your tour request?</p>
+                </div>
+                <div class="input">
+                  <button type="submit">Submit</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
+          <div id="complete">
+            <header>
+              <div class="subHeader">
+                <h4>Your tour has been schedule on:</h4>
+                <h2>Thusday (4/29/19) <br> at 3:00 PM</h2>
+              </div>
+            </header>
+            <div class="information">
+              <p>One of our leasing representatives will contact you within 24 hours to confirm your tour. If you have any questions, or need to cancel or change your scheduled time, please call us at (202) 517-7640. See you soon! </p>
+              <ul>
+                <li>
+                  <a href=""><img src="_assets/images/map-marker.svg"> I need directions</a>
+                </li>
+                <li>
+                  <a href=""><img src="_assets/images/calendar.svg"> Add tour to my calendar</a>
+                </li>
+                <li>
+                  <a href=""><img src="_assets/images/messages.svg"> Setup an SMS reminder for me</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </section>
+      </main>
+
+      <footer>
+        <div class="back">
+          <button id="back" class="active" alt="back" onclick="nextQuestion(-1)">
+            <img src="_assets/images/angle-left-white.svg">
+          </button>
+        </div>
+        <div class="next">
+          <button id="next" class="active" alt="next" onclick="nextQuestion(1)">
+            <img src="_assets/images/angle-right-white.svg">
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- The Modal -->
+    <div id="calModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Please select a date below</h2>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="_assets/js/app.js"></script>
+  </body>
+</html>
